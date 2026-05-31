@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="TREMORMESH system architecture">
+  <style>
+    .box{fill:#ffffff;stroke:#33415c;stroke-width:2;rx:10;}
+    .node{fill:#eef4ff;stroke:#2b6cb0;stroke-width:2;}
+    .gw{fill:#fff3e6;stroke:#dd6b20;stroke-width:2;}
+    .srv{fill:#fde8e7;stroke:#e53e3e;stroke-width:2;}
+    .out{fill:#e9f9ef;stroke:#2f855a;stroke-width:2;}
+    .t{fill:#1a202c;font-size:16px;font-weight:600;}
+    .s{fill:#4a5568;font-size:12px;}
+    .lbl{fill:#718096;font-size:12px;}
+    .arrow{stroke:#718096;stroke-width:2;fill:none;marker-end:url(#a);}
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#718096"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="40" font-size="22" font-weight="800" fill="#1a202c">System Architecture</text>
+
+  <!-- Nodes -->
+  <g>
+    <rect class="node" x="40" y="90" width="220" height="90" rx="10"/>
+    <text class="t" x="60" y="120">Node A · ESP32 + MEMS</text>
+    <text class="s" x="60" y="142">on-board STA/LTA P-wave trigger</text>
+    <text class="s" x="60" y="162">publishes JSON on detect</text>
+
+    <rect class="node" x="40" y="200" width="220" height="90" rx="10"/>
+    <text class="t" x="60" y="230">Node B · ESP32 + MEMS</text>
+    <text class="s" x="60" y="252">~$15 bill of materials</text>
+    <text class="s" x="60" y="272">Wi-Fi / LoRa uplink</text>
+
+    <rect class="node" x="40" y="310" width="220" height="90" rx="10"/>
+    <text class="t" x="60" y="340">Node N · ESP32 + MEMS</text>
+    <text class="s" x="60" y="362">density beats sensitivity</text>
+    <text class="s" x="60" y="382">deploy by the hundred</text>
+  </g>
+
+  <!-- Gateway -->
+  <rect class="gw" x="370" y="200" width="220" height="100" rx="10"/>
+  <text class="t" x="390" y="232">Gateway (Raspberry Pi)</text>
+  <text class="s" x="390" y="256">MQTT broker + bridge</text>
+  <text class="s" x="390" y="276">6_Server/gateway.py</text>
+
+  <!-- Consensus -->
+  <rect class="srv" x="690" y="200" width="220" height="100" rx="10"/>
+  <text class="t" x="710" y="232">Consensus Engine</text>
+  <text class="s" x="710" y="256">quorum + geo-spread</text>
+  <text class="s" x="710" y="276">6_Server/consensus.py</text>
+
+  <!-- Outputs -->
+  <rect class="out" x="690" y="60" width="220" height="80" rx="10"/>
+  <text class="t" x="710" y="92">Early-Warning Alerts</text>
+  <text class="s" x="710" y="116">webhook · siren · push</text>
+
+  <rect class="out" x="690" y="360" width="220" height="80" rx="10"/>
+  <text class="t" x="710" y="392">Open Data Feed</text>
+  <text class="s" x="710" y="416">map · API · research</text>
+
+  <!-- arrows -->
+  <path class="arrow" d="M260,135 C320,135 330,235 368,240"/>
+  <path class="arrow" d="M260,245 L368,250"/>
+  <path class="arrow" d="M260,355 C320,355 330,265 368,260"/>
+  <path class="arrow" d="M590,250 L688,250"/>
+  <path class="arrow" d="M800,200 L800,142"/>
+  <path class="arrow" d="M800,300 L800,358"/>
+
+  <text class="lbl" x="280" y="190">triggers</text>
+  <text class="lbl" x="600" y="240">fused stream</text>
+</svg>

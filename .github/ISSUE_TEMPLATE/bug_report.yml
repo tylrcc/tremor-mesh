@@ -1,0 +1,40 @@
+name: Bug report
+description: Something is not working as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping make the mesh more reliable.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Firmware (ESP32 node)
+        - Detector (tremormesh/stalta.py)
+        - Consensus / server (6_Server)
+        - Simulation (7_Simulations)
+        - Hardware / build
+        - Docs
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you get instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      placeholder: OS, Python version, board, sensor, etc.

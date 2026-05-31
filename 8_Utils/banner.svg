@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="TREMORMESH banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#13203a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff5a4d"/>
+      <stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <!-- seismograph trace -->
+  <polyline fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.9"
+    points="0,200 120,200 150,198 180,202 210,199 240,201 300,200 330,150 345,255 360,120 375,275 390,165 410,205 440,198 470,201 540,200 600,200 700,200 760,200 800,160 815,250 830,140 845,260 860,180 880,205 920,199 980,201 1100,200 1200,200"/>
+  <text x="60" y="120" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="#ffffff" letter-spacing="2">TREMOR<tspan fill="#ff5a4d">MESH</tspan></text>
+  <text x="62" y="160" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#9fb3d1">A $15 seismometer in every home - a crowd-powered earthquake early-warning mesh.</text>
+  <text x="62" y="280" font-family="Consolas, monospace" font-size="18" fill="#6f86ad">open hardware · open firmware · open data  ·  P-wave triggers in &lt; 1 s</text>
+</svg>

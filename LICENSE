@@ -1,0 +1,39 @@
+TREMORMESH - Dual License
+==========================
+
+This project uses two licenses, mirroring open-hardware best practice:
+
+1. HARDWARE & DOCUMENTATION  →  CERN-OHL-P v2 (Permissive)
+   Applies to: schematics, board layouts, BOMs, mechanical/enclosure files,
+   and design documentation under 1_*, 2_*, 3_*, and 8_Utils/.
+
+2. SOFTWARE & FIRMWARE  →  MIT (see LICENSE-MIT)
+   Applies to: all source code, including 4_Firmware/, 5_Algorithms/,
+   6_Server/, 7_Simulations/, and CI scripts.
+
+----------------------------------------------------------------------
+CERN Open Hardware Licence Version 2 - Permissive (CERN-OHL-P v2)
+----------------------------------------------------------------------
+
+Copyright (C) 2026 The TREMORMESH Contributors.
+
+This source describes Open Hardware and is licensed under the CERN-OHL-P v2.
+
+You may redistribute and modify this documentation and make products using it
+under the terms of the CERN-OHL-P v2 (https://ohwr.org/cern_ohl_p_v2.txt).
+
+This documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY,
+INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A
+PARTICULAR PURPOSE. Please see the CERN-OHL-P v2 for applicable conditions.
+
+The full text of the CERN-OHL-P v2 is available at:
+    https://ohwr.org/cern_ohl_p_v2.txt
+
+----------------------------------------------------------------------
+Why two licenses?
+----------------------------------------------------------------------
+Hardware and software have different reuse and liability concerns. CERN-OHL-P
+is purpose-built for hardware documentation and clearly defines terms like
+"Product" and "Documentation"; MIT is the most frictionless choice for the
+code, so anyone can drop the detector or consensus engine into their own
+stack with zero ceremony. See docs/licensing.md for the full rationale.

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="P-wave vs S-wave warning window">
+  <rect width="1000" height="360" fill="#fbfdff"/>
+  <text x="40" y="40" font-size="22" font-weight="800" fill="#1a202c">Why early warning is possible</text>
+  <text x="40" y="64" font-size="14" fill="#4a5568">P-waves outrun S-waves. Detect the harmless P arrival, warn before the destructive S arrives.</text>
+
+  <!-- axis -->
+  <line x1="60" y1="250" x2="960" y2="250" stroke="#a0aec0" stroke-width="2"/>
+  <text x="900" y="278" font-size="13" fill="#718096">time →</text>
+
+  <!-- P arrival -->
+  <line x1="300" y1="120" x2="300" y2="250" stroke="#2b6cb0" stroke-width="2" stroke-dasharray="4 3"/>
+  <polyline fill="none" stroke="#2b6cb0" stroke-width="2"
+    points="300,250 312,210 324,250 336,225 348,250 360,235 372,250 420,250 500,250"/>
+  <text x="252" y="110" font-size="14" font-weight="700" fill="#2b6cb0">P-wave</text>
+  <text x="246" y="300" font-size="12" fill="#718096">detected here</text>
+
+  <!-- S arrival -->
+  <line x1="620" y1="80" x2="620" y2="250" stroke="#e53e3e" stroke-width="2" stroke-dasharray="4 3"/>
+  <polyline fill="none" stroke="#e53e3e" stroke-width="2.5"
+    points="620,250 636,150 652,250 668,120 684,250 700,140 716,250 732,170 748,250 800,250 900,250"/>
+  <text x="572" y="70" font-size="14" font-weight="700" fill="#e53e3e">S-wave (damage)</text>
+
+  <!-- warning window -->
+  <line x1="300" y1="320" x2="620" y2="320" stroke="#2f855a" stroke-width="3" marker-start="url(#cap)" marker-end="url(#cap)"/>
+  <rect x="380" y="304" width="170" height="26" rx="6" fill="#e9f9ef" stroke="#2f855a"/>
+  <text x="392" y="322" font-size="14" font-weight="700" fill="#2f855a">warning window (seconds)</text>
+  <defs>
+    <marker id="cap" markerWidth="8" markerHeight="12" refX="4" refY="6" orient="auto">
+      <line x1="4" y1="0" x2="4" y2="12" stroke="#2f855a" stroke-width="3"/>
+    </marker>
+  </defs>
+</svg>

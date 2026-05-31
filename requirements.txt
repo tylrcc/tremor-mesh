@@ -1,0 +1,11 @@
+# Core (required)
+numpy>=1.23
+
+# Optional - enables `python demo.py --plot`
+# matplotlib>=3.6
+
+# Optional - enables the live MQTT path in 6_Server/gateway.py
+# paho-mqtt>=1.6
+
+# Dev / CI
+pytest>=7.0

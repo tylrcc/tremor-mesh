@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security / warning-integrity report
+    url: https://github.com/tylrcc/tremor-mesh/security/advisories/new
+    about: Report a vulnerability or a way to spoof/suppress alerts privately.
+  - name: Question or discussion
+    url: https://github.com/tylrcc/tremor-mesh/discussions
+    about: Ask a question or share a deployment.

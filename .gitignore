@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Generated artifacts - keep them OUT of the repo root
+*.png
+*.jpg
+*.csv
+stalta_demo.png
+7_Simulations/generated/
+docs/_build/
+
+# Embedded toolchains
+.pio/
+build/
+*.bin
+*.elf
+.vivado/
+*.jou
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
