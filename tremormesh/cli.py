@@ -131,8 +131,21 @@ def sim_main(argv: list[str] | None = None) -> int:
           f"S-wave at {target_s_arrival:.2f}s")
     print(f"  WARNING LEAD AT TARGET       : {lead:.2f}s before strong shaking")
     print("=" * 64)
-    return 0 if lead > 0 else 1
 
+    # === NEW: Friendly Output Banner for Issue #7 ===
+    print("\n" + "!" * 64)
+    print(f"!! {'🚨 BREAKING: EARTHQUAKE WARNING ISSUED 🚨':^56} !!")
+    print("!" * 64 + "\n")
+    print(f"   [+] BLIND-ZONE RADIUS : ~{blind_zone_km:.0f} km")
+    print(f"   [+] WARNING LEAD TIME : {lead:.2f} seconds\n")
+    print("=" * 64)
+    print(f"   [BROADCAST ACTION / ACTIONABLE NOTICE]:")
+    print(f"   EVACUATION TRIGGER SENT! ADVISE ALL TARGET STATIONS TO")
+    print(f"   BROADCAST IMMEDIATELY: 'MOVE TO OPEN FIELDS AWAY FROM")
+    print(f"   BUILDINGS AND TALL TREES!'")
+    print("=" * 64 + "\n")
+
+    return 0 if lead > 0 else 1
 
 if __name__ == "__main__":
     demo_main()
