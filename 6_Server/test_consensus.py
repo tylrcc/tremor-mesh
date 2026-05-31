@@ -52,3 +52,20 @@ def test_cooldown_suppresses_repeat() -> None:
     eng.ingest(NodeTrigger("a", **A, t=23.0, ratio=9.0))
     eng.ingest(NodeTrigger("b", **B, t=23.5, ratio=7.5))
     assert eng.ingest(NodeTrigger("c", **C, t=24.0, ratio=8.1)) is None
+
+
+def test_cooldown_boundary_allows_repeat_at_exact_limit() -> None:
+    eng = ConsensusEngine(quorum=3, window_sec=5.0, cooldown_sec=30.0)
+    eng.ingest(NodeTrigger("a", **A, t=20.0, ratio=9.0))
+    eng.ingest(NodeTrigger("b", **B, t=21.0, ratio=7.5))
+    assert eng.ingest(NodeTrigger("c", **C, t=22.0, ratio=8.1)) is not None
+
+    # Cooldown suppresses repeats while elapsed time is strictly less than
+    # cooldown_sec; exactly cooldown_sec after the last alert is allowed.
+    eng.ingest(NodeTrigger("a", **A, t=50.0, ratio=9.0))
+    eng.ingest(NodeTrigger("b", **B, t=51.0, ratio=7.5))
+    alert = eng.ingest(NodeTrigger("c", **C, t=52.0, ratio=8.1))
+
+    assert alert is not None
+    assert alert.triggered_at == 52.0
+    assert alert.node_ids == ["a", "b", "c"]
