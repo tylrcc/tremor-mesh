@@ -3,15 +3,26 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-alpha-orange" alt="status">
-  <img src="https://img.shields.io/badge/node%20cost-~%2415-brightgreen" alt="cost">
-  <img src="https://img.shields.io/badge/hardware-CERN--OHL--P-blue" alt="hardware license">
-  <img src="https://img.shields.io/badge/software-MIT-green" alt="software license">
+  <a href="https://github.com/tylrcc/tremor-mesh/blob/main/docs/roadmap.md"><img src="https://img.shields.io/badge/status-alpha-orange" alt="status: alpha"></a>
+  <a href="https://github.com/tylrcc/tremor-mesh/blob/main/3_Hardware/3_1_BOM/BOM.md"><img src="https://img.shields.io/badge/node%20cost-~%2415-brightgreen" alt="node cost: ~$15"></a>
+  <a href="https://github.com/tylrcc/tremor-mesh/blob/main/LICENSE"><img src="https://img.shields.io/badge/hardware-CERN--OHL--P-blue" alt="hardware license: CERN-OHL-P"></a>
+  <a href="https://github.com/tylrcc/tremor-mesh/blob/main/LICENSE-MIT"><img src="https://img.shields.io/badge/software-MIT-green" alt="software license: MIT"></a>
+  <a href="https://github.com/tylrcc/tremor-mesh/actions/workflows/ci.yml"><img src="https://github.com/tylrcc/tremor-mesh/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
+  <a href="https://github.com/tylrcc/tremor-mesh/stargazers"><img src="https://img.shields.io/github/stars/tylrcc/tremor-mesh" alt="GitHub stars"></a>
 </p>
 
 # TREMORMESH
 
 A ~$15 seismometer you can build, plus the glue to make a bunch of them act as one earthquake early-warning network.
+
+**At a glance**
+
+- **What:** an early-warning network made of many cheap nodes instead of a few expensive stations — one node detects, the mesh decides.
+- **Who it's for:** hobbyists, makers, and small research groups in earthquake country that the big networks don't reach; anyone comfortable flashing an ESP32.
+- **Cost:** ~$15 per Lite node, ~$55 for the Pro build ([parts list](3_Hardware/3_1_BOM/BOM.md)).
+- **Status:** alpha. The detector, gateway, and full-pipeline simulation all run today; it's a research project, not a safety system. See the [roadmap](docs/roadmap.md) and [where it's rough](#where-its-rough).
+- **License:** hardware and docs CERN-OHL-P, code and firmware MIT.
+- **Want to help?** Start with a [good first issue](https://github.com/tylrcc/tremor-mesh/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or jump to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 The systems that already do this (ShakeAlert, Japan's, Mexico's) work really well, but they run on seismometers that cost thousands of dollars apiece. So they're sparse, and most of the world that shakes isn't covered at all. I wanted to see how far you could get going the opposite direction: a pile of cheap ESP32 + MEMS nodes, each one kind of mediocre on its own, that only raise the alarm when enough of them agree. A real quake hits all of them at nearly the same instant. A slammed door hits one. That gap is the entire trick.
 
